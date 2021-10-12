@@ -4,8 +4,7 @@ import pymongo
 class PyMongoConnection:
     def __init__(self, password, db):
         client = pymongo.MongoClient(
-            "mongodb+srv://ananthu329:{0}@litest001.ny9ap.mongodb.net/{1}?retryWrites=true&w=majority".format(password,
-                                                                                                              db))
+            "mongo DB connection string".format(password, db))
         self.db = client.Twitter_Data
         self.coll = self.db.tweets
 
